@@ -1,5 +1,5 @@
 # slacktrash
-Slack has poor data cleaning policies. This tool deletes direct chat messages.
+Slack has poor data cleaning policies. This tool deletes messages of a given user in a given channel.
 
 Slack has been notoriously outspoken about retaining all data, even if customers want it deleted.
 The overall policy (as of 08/17) is:
