@@ -6,8 +6,9 @@ INSTRUCTIONS:
 $ node app.js
 **/
 
-// var util = require('util');
+require('dotenv').config()
 var request = require('request');
+
 
 /*
 * API
@@ -16,10 +17,14 @@ var request = require('request');
 var api_history = "https://slack.com/api/im.history";
 var api_delete = "https://slack.com/api/chat.delete";
 
-// TODO: make tokens and user params environment variables
-var token = "";
-var user = ""
-var channel = "";
+// Load environment variables
+var token = process.env.TOKEN;
+var user = process.env.USR;
+var channel = process.env.CHANNEL;
+
+console.log(token)
+console.log(user)
+console.log(channel)
 
 // These can be changed but Slack is picky about their timeouts. This combo works best
 var num_msgs = 1000;
