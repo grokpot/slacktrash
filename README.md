@@ -16,5 +16,5 @@ While it is impossible to delete messages from Slack's internal archives, it is 
 This tool deletes all messages of a given user in a given channel. In order for it to work, you must have a legacy API token for that user. API tokens can be obtained here: https://api.slack.com/custom-integrations/legacy-tokens
 You will also need the ID of the user and ID of the channel. These can be obtained by inspecting the page in the slack webapp.
 
-Once obtained, these parameters should be set as environment variables and the app can be run as:
+Once obtained, these parameters should be set as environment variables (via [dotenv](https://github.com/motdotla/dotenv)) and the app can be run as:
 `$ node app.js`
