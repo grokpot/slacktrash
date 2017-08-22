@@ -1,0 +1,23 @@
+{
+  "name": "slacktrash",
+  "version": "1.0.0",
+  "description": "Slack has poor data cleaning policies. This tool deletes direct chat messages.",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanprater/slacktrash.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanprater/slacktrash/issues"
+  },
+  "homepage": "https://github.com/ryanprater/slacktrash#readme"
+}
