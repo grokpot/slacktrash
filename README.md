@@ -1,6 +1,7 @@
 # slacktrash
 Slack has poor data cleaning policies. This tool deletes messages of a given user in a given channel.
 
+#### What this tool does
 Slack has been notoriously outspoken about retaining all data, even if customers want it deleted.
 The overall policy (as of 08/17) is:
 * All messages are stored permanently.  
@@ -19,6 +20,6 @@ You will also need the ID of the user and ID of the channel. These can be obtain
 Once obtained, these parameters should be set as environment variables (via [dotenv](https://github.com/motdotla/dotenv)) and the app can be run as:
 `$ node app.js`
 
-###NOTES:
+#### NOTES:
 1. Slack has a very short API rate limit. In order to not be rate limited (and your token possibly banned), this tool deletes 1 message per ~1 second. It's unfortunate, but the deletion rate can easiliy be modified if you think you can do better. I would suggest running this tool overnight for lengthly channels.
 2. The free plan "10,000 messsage history" is a sum of all channel messages. This tool deletes all visible messages. Nightly, Slack restores messages _across all channels_ to a total sum of 10,000. So if you have 5,000 in channelA and 5,000 in channel B and delete 1,000 from channelB, the next morning you will probably have 5,500 in channelA and 4,500 in channelB. Therefore, it might be impossible to delete all messages dating back to channel creation on a free plan.
